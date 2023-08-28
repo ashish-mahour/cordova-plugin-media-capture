@@ -802,7 +802,7 @@
         // begin recording
         __block NSError* error = nil;
 
-        __weak CDVAudioRecorderViewController* weakSelf = self;
+        CDVAudioRecorderViewController* weakSelf = self;
 
         void (^startRecording)(void) = ^{
             [weakSelf.avSession setActive:YES error:&error];
@@ -895,7 +895,7 @@
     }];
     [controller addAction:actionSettings];
 
-    __weak CDVAudioRecorderViewController* weakSelf = self;
+    CDVAudioRecorderViewController* weakSelf = self;
     [weakSelf presentViewController:controller animated:true completion:nil];
 }
 
